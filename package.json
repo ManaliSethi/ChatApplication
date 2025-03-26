@@ -1,23 +1,29 @@
 {
-  "name": "chat-app",
+  "name": "nodejs-chat-app",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/ManaliSethi/ChatApplication#readme",
+  "bugs": {
+    "url": "https://github.com/ManaliSethi/ChatApplication/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManaliSethi/ChatApplication.git"
+  },
+  "license": "ISC",
+  "author": "manali",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "./node_modules/nodemon/bin/nodemon.js --ext js,css,html src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Owan Hunte",
-  "license": "ISC",
   "dependencies": {
-    "bad-words": "^3.0.3",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "bad-words": "^4.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1"
   }
 }
