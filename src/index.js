@@ -2,7 +2,7 @@ const path = require("path");
 const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
-const Filter = require("bad-words");
+//const Filter = require("bad-words");
 const { generateMessage, generateLocationMessage } = require("./utils/messages");
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./utils/users");
 
@@ -40,14 +40,14 @@ io.on("connection", socket => {
 
   socket.on("sendMessage", (message, callback) => {
     const user = getUser(socket.id);
-    const filter = new Filter();
+    //const filter = new Filter();
 
-    if (filter.isProfane(message)) {
-      return callback("Profanity is not allowed!");
-    } else {
+    // if (filter.isProfane(message)) {
+    //   return callback("Profanity is not allowed!");
+    // } else {
       io.to(user.room).emit("message", generateMessage(user.username, message));
       callback();
-    }
+   // }
   });
 
   socket.on("sendLocation", (coords, callback) => {
